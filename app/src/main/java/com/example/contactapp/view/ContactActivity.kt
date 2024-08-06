@@ -15,7 +15,7 @@ import com.example.contactapp.view.contactDetail.ContactDetailFragment
 
 class ContactActivity : AppCompatActivity() {
     private lateinit var binding: ActivityContactBinding
-    //private val contactListFragment = ContactListFragment()
+    private val contactListFragment = ContactListFragment()
     private val contactDetailFragment = ContactDetailFragment()
     private val contactViewModel: ContactViewModel by viewModels()
 
@@ -23,7 +23,7 @@ class ContactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityContactBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setCurrentFragment(contactDetailFragment)
+        setCurrentFragment(contactListFragment)
         initUI()
 
     }

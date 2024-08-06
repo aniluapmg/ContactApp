@@ -42,14 +42,13 @@ class ContactDetailFragment : Fragment() {
         contactViewModel.contacts.observe(viewLifecycleOwner, Observer { contacts ->
             if (contacts.isNotEmpty()) {
                 //Carga la imagen usando Picasso
-                Picasso.get().load(contacts[0].picture.large).into(binding.imageView)
+                Picasso.get().load(contacts[0].picture).into(binding.imageView)
 
                 //Asigna los demas datos a los TextViews
-                binding.textViewFirstName.text = contacts[0].name.first
-                binding.textViewLastName.text = contacts[0].name.last
+                binding.textViewFirstName.text = contacts[0].name + " " + contacts[0].last
                 binding.textViewEmail.text = contacts[0].email
                 binding.textViewPhone.text = contacts[0].phone
-                binding.textViewAddressStreet.text = contacts[0].location.street.name + ", " + contacts[0].location.country
+                binding.textViewAddressStreet.text = contacts[0].location + ", " + contacts[0].country
 
 
 

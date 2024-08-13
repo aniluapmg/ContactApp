@@ -43,7 +43,10 @@ class ContactListFragment : Fragment() {
     private fun initUIState() {
         contactViewModel.contacts.observe(viewLifecycleOwner, Observer { contacts ->
             binding.recyclerView.layoutManager = LinearLayoutManager(context)
-            binding.recyclerView.adapter = ContactListAdapter(contacts)
+            binding.recyclerView.adapter = ContactListAdapter(contacts){contact ->
+                println(contact)
+                contactViewModel.setCurrentContact(contact)
+            }
         })
     }
 }

@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface ContactDao {
@@ -17,4 +18,7 @@ interface ContactDao {
 
     @Query("DELETE FROM contact_entity")
     suspend fun deleteAllContacts()
+
+    @Update
+    suspend fun updateContact(item: ContactEntity)
 }

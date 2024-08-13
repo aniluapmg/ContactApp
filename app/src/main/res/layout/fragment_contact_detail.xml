@@ -9,8 +9,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
-         />
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,13 +51,34 @@
         android:padding="16dp"
         android:translationY="40dp">
 
+        <ImageButton
+            android:id="@+id/not_favorite_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/favorite"
+            android:src="@drawable/fav_outline_heart_button">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/heart_favorite_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/favorite"
+            android:src="@drawable/fav_heart" />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Email:"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Email:" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -78,10 +98,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Phone:"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Phone:" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewPhone"
@@ -101,10 +121,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Address:"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Address:" />
+            android:textStyle="bold" />
 
 
         <TextView

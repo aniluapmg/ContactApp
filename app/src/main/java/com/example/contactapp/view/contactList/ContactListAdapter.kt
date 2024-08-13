@@ -2,12 +2,14 @@ package com.example.contactapp.view.contactList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contactapp.data.dataBase.ContactEntity
 import com.example.contactapp.databinding.ItemContactListBinding
 
 class ContactListAdapter(
-    private var contacts: List<ContactEntity>
+    private var contacts: List<ContactEntity>,
+    var itemClickListener: (ContactEntity) -> Unit
 ) : RecyclerView.Adapter<ContactListAdapter.ContactHolder>() {
 
     inner class ContactHolder(val binding: ItemContactListBinding) :
@@ -16,6 +18,9 @@ class ContactListAdapter(
             fun render(contact: ContactEntity) {
                 binding.textViewName.text = contact.name
                 binding.textViewEmail.text = contact.email
+                binding.itemContact.setOnClickListener{
+                    itemClickListener(contact)
+                }
             }
     }
 

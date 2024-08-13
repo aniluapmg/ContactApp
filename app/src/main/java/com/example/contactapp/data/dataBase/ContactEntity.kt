@@ -14,6 +14,7 @@ data class ContactEntity (
     @ColumnInfo(name = "phone") val phone: String,
     @ColumnInfo(name = "location") val location: String,
     @ColumnInfo(name = "country") val country: String,
-    @ColumnInfo(name = "picture") val picture: String
+    @ColumnInfo(name = "picture") val picture: String,
+    @ColumnInfo(name = "favorite") val favorite: Boolean = false
 
 )

@@ -13,6 +13,7 @@ constraintlayout = "2.1.4"
 picasso = "2.71828"
 retrofit = "2.11.0"
 roomRuntime = "2.6.1"
+kaptVersion = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,4 +36,4 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+kotlinKapt = {id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion"}

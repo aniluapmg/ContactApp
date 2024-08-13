@@ -6,22 +6,22 @@
 
 
     <LinearLayout
+        android:id="@+id/itemContact"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="70dp"
-            android:layout_height="20dp"
-            />
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

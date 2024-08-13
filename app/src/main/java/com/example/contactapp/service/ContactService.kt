@@ -62,6 +62,10 @@ class ContactService {
         return response.body()?.results ?: emptyList()
     }
 
+    suspend fun updateContact(contact: ContactEntity) {
+        return ContactApp.database.contactDao().updateContact(contact)
+    }
+
 
 
 }
